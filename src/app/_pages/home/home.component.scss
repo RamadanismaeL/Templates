@@ -1,0 +1,100 @@
+.magic-card {
+  display: flex;
+  margin-top: 3rem;
+  margin-left: 15%;
+  margin-right: 15%;
+  position: absolute;
+}
+.principal {
+  height: 100vh;
+  background: url('../../../../public/_images/bmw3.png') no-repeat center;
+  background-size: cover;
+
+  .marg {
+    margin-left: 15%;
+    margin-right: 15%;
+    position: absolute;
+    top: 20%;
+
+    .box {
+      cursor: default;
+      background-color: transparent;
+      width: 35vw;
+      color: #fff;
+
+      .title {
+        font-size: 50pt;
+        .sp1 {
+          font-weight: 200;
+        }
+        .sp2 {
+          font-weight: 600;
+        }
+      }
+
+      .info {
+        padding-top: 5vh;
+        font-size: 25pt;
+        font-weight: 200;
+      }
+    }
+  }
+  .bx {
+    position: absolute;
+    background: rgb(69,0,187);
+    background: linear-gradient(24deg, rgba(69,0,187,1) 0%, rgba(252,70,110,1) 100%);
+    background-size: 300px;
+    transform: rotate(45deg);
+    top: 70vh;
+    left: 75vw;
+    animation: boxP 1s ease-in-out infinite alternate;
+
+    @keyframes boxP {
+      0%{
+        width: 1vh;
+        height: 1vh;
+        opacity: 0;
+        background-position: 0 25%;
+        transform: translate(20px);
+      }
+      25% {
+        background-position: 50% 25%;
+        transform: translate(70px);
+      }
+      50%{
+        background-position: 75% 50%;
+        transform: translate(150px);
+      }
+      75%{
+        background-position: 100% 75%;
+        transform: translate(-70px);
+      }
+      100%{
+        opacity: 1;
+        width: 9vh;
+        height: 9vh;
+        background-position: 0 50%;
+        top: 20vh;
+        left: 75vw;
+        transform: translate(-20px);
+      }
+    }
+  }
+}
+
+i {
+  font-size: 3em;
+  position: absolute;
+  bottom: 10vh;
+  left: 50vw;
+  color: rgba(70,211,252,.3);
+  animation: icon 1s ease-in-out alternate infinite;
+  @keyframes icon {
+    to{
+      transform: translateY(0);
+    }
+    from{
+      transform: translateY(2vh);
+    }
+  }
+}
